@@ -26,10 +26,10 @@ Food
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/Login">Login</NavLink>
+              <NavLink to="/login">Login</NavLink>
             </li>
             <li>
-              <NavLink to="/Register">Register</NavLink>
+              <NavLink to="/signup">SignUp</NavLink>
             </li>
             <li>
               <NavLink to="/about">About</NavLink>
