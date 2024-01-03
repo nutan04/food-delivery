@@ -15,6 +15,8 @@ mongoDB().then(()=>{
     })
      app.use(express.json());
     app.use("/api",require("./Routes/CreateUser"));
+    app.use("/api",require("./Routes/DisplayData"));
+
     
     // const start =async()=>{
     //     try {
