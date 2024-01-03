@@ -1,15 +1,24 @@
 import React, { Component } from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-export class card extends Component {
-  render() {
-    return (
+
+
+export default function card(props) {
+  let option =props.option;
+  let optionkey=Object.keys(option)
+  return (
+    <>
         
-        <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="https://source.unsplash.com/random/100×100/?pizza" style={{
-            height:"250px",width:"100%"
+    <div class=" col-lg-3 col-md-4 col-sm-12">
+
+    
+       
+        <Card  style={{ width: '18rem' }} className='mb-4'>
+        <Card.Img variant="top" src={props.imgsrc} style={{
+            height:"250px", objectFit:"fill"
         }} />
         <Card.Body>
+        <Card.Title>{props.foodName}</Card.Title>
         <Card.Title>Total Price : INR 200</Card.Title>
           
          
@@ -24,8 +33,14 @@ export class card extends Component {
               
           </select>
           <select className='m-2 h-100 w-50' name="" id="">
-              <option value="Half">Half</option>
-              <option value="Full">Full</option>
+            {
+              optionkey.map((data)=>{
+                return (<>
+                <option  key={data} value={data}>{data}</option>
+                </>)
+              })
+            }
+             
   
           </select>
        
@@ -37,8 +52,10 @@ export class card extends Component {
         </Card.Body>
         
       </Card>
-    )
-  }
+      </div>
+    
+      </>
+  )
 }
 
-export default card
+
