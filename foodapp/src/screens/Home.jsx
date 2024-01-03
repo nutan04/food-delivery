@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 
 import Footer from '../components/Footer';
 import Carousel from 'react-bootstrap/Carousel';
-import Card from '../components/card';
+import Card from '../components/Cardnew';
 
 
 function Home() {
@@ -100,10 +100,10 @@ function Home() {
 
                               <div key={filterItems._id} className='col-lg-3 col-md-6 col-sm-12'>
 
-                                <Card foodName={filterItems.name}
-                                  imgsrc={filterItems.img}
+                                <Card 
+                                foodItem={filterItems}
                                   option={filterItems.options[0]}
-                                  description={filterItems.description}
+                                 
 
                                 />
 
